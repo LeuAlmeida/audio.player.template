@@ -6,12 +6,34 @@ export default {
   audioData: audios,
   currentAudio: {},
   currentPlaying: 0,
+  isPlaying: false,
 
   start() {
     elements.get.call(this);
+    elements.actions.call(this);
 
     this.update();
     this.audio.onended = () => this.next();
+  },
+
+  play() {
+    this.isPlaying = true,
+    this.audio.play();
+    this.playPause.innerText = "pause"
+  },
+
+  pause() {
+    this.isPlaying = false,
+    this.audio.pause();
+    this.playPause.innerText = "play_arrow"
+  },
+
+  togglePlayPause() {
+    if (this.isPlaying) {
+      this.pause();
+    } else {
+      this.play();
+    }
   },
 
   next() {
@@ -27,7 +49,7 @@ export default {
     )}') no-repeat center center / cover`
     this.title.innerText = this.currentAudio.title;
     this.artist.innerText = this.currentAudio.artist;
-    this.audio.src = path(this.currentAudio.file);
+    elements.createAudioElement.call(this, path(this.currentAudio.file))
   },
 
   restart() {
