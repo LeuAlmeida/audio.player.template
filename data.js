@@ -1,4 +1,4 @@
-window.audios = [
+export default [
   {
     title: "Lorem ipsum dolor sit amet (1)",
     artist: "Léu Almeida",
