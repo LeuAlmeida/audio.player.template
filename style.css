@@ -68,3 +68,20 @@ input[type="range"]::-moz-range-thumb {
 input[type="range"]::-ms-thumb {
   background-color: var(--primary);
 }
+
+.copyright {
+  text-align: center;
+  padding-bottom: 5px;
+  color: var(--primary);
+}
+
+.copyright a {
+  font-weight: bold;
+  color: var(--primary);
+}
+
+.copyright i {
+  font-size: 14px;
+  transform: translateY(2px);
+  color: var(--primary);
+}
