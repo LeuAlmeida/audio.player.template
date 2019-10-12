@@ -6,6 +6,7 @@ export default {
     this.playPause = document.querySelector("#play-pause");
     this.mute = document.querySelector('#mute');
     this.volume = document.querySelector("#vol-control")
+    this.seekbar = document.querySelector("#seekbar")
   },
   createAudioElement(audio) {
     this.audio = new Audio(audio);
@@ -15,5 +16,7 @@ export default {
     this.mute.onclick = () => this.toggleMute();
     this.volume.oninput = () => this.setVolume(this.volume.value);
     this.volume.onchange = () => this.setVolume(this.volume.value);
+    this.seekbar.oninput = () => this.setSeek(this.seekbar.value);
+    this.seekbar.onchange = () => this.setSeek(this.seekbar.value);
   }
 };

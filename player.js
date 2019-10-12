@@ -51,6 +51,10 @@ export default {
     this.audio.volume = value / 100;
   },
 
+  setSeek(value) {
+    this.audio.currentTime = value;
+  },
+
   update() {
     this.currentAudio = this.audioData[this.currentPlaying];
     this.cover.style.background = `url('${path(
@@ -58,7 +62,8 @@ export default {
     )}') no-repeat center center / cover`
     this.title.innerText = this.currentAudio.title;
     this.artist.innerText = this.currentAudio.artist;
-    elements.createAudioElement.call(this, path(this.currentAudio.file))
+    elements.createAudioElement.call(this, path(this.currentAudio.file));
+    this.seekbar.max = this.audio.duration;
   },
 
   restart() {
