@@ -1,6 +1,6 @@
 # :sound: Audio Player Template
 <p align="center">
-<img height="500" src="presentation/readme/presentation.png" />
+<img src="presentation/readme/presentation.png" />
 </p>
 
 <p align="center">
