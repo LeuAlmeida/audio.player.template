@@ -8,13 +8,11 @@ window.player = {
   currentPlaying: 0,
   start() {
     this.update();
-
     this.audio.onended = () => this.next();
   },
 
   next() {
     this.currentPlaying++;
-
     if (this.currentPlaying == this.audioData.length) this.restart();
     this.update();
     this.audio.play();
@@ -22,7 +20,6 @@ window.player = {
 
   update() {
     this.currentAudio = this.audioData[this.currentPlaying];
-
     this.cover.style.background = `url('${path(
       this.currentAudio.cover
     )}') no-repeat center center / cover`;
@@ -36,3 +33,4 @@ window.player = {
     this.update();
   }
 };
+x;
