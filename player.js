@@ -47,6 +47,10 @@ export default {
     this.update();
   },
 
+  setVolume(value) {
+    this.audio.volume = value / 100;
+  },
+
   update() {
     this.currentAudio = this.audioData[this.currentPlaying];
     this.cover.style.background = `url('${path(
