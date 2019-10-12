@@ -52,7 +52,7 @@ audio {
   background-color: var(--primary);
 }
 
-#vol {
+#mute {
   color: var(--primary);
   transform: translateY(2px);
 }
