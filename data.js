@@ -15,6 +15,6 @@ export default [
     title: "Lorem ipsum dolor sit amet (3)",
     artist: "Léu Almeida",
     cover: "cover3.jpg",
-    file: "music3.wav",
+    file: "music3.mp3",
   }
 ];
