@@ -36,6 +36,11 @@ export default {
     }
   },
 
+  toggleMute() {
+    this.audio.muted = !this.audio.muted;
+    this.vol.innerText = this.audio.muted ? "volume_mute" : "volume_up"
+  },
+
   next() {
     this.currentPlaying++;
     if (this.currentPlaying == this.audioData.length) this.restart();
