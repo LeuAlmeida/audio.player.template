@@ -10,9 +10,7 @@ export default {
 
   start() {
     elements.get.call(this);
-
     this.update();
-    this.audio.onended = () => this.next();
   },
 
   play() {
@@ -42,6 +40,7 @@ export default {
     this.currentPlaying++;
     if (this.currentPlaying == this.audioData.length) this.restart();
     this.update();
+    this.play();
   },
 
   setVolume(value) {

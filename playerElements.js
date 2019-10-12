@@ -16,6 +16,7 @@ export default {
     this.audio = new Audio(audio);
   },
   actions() {
+    this.audio.onended = () => this.next();
     this.audio.ontimeupdate = () => this.timeUpdate();
     this.playPause.onclick = () => this.togglePlayPause();
     this.mute.onclick = () => this.toggleMute();
