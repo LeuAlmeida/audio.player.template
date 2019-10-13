@@ -4,7 +4,8 @@
 </p>
 
 <p align="center">
-Made with :purple_heart: and :coffee: learned from <a href="http://github.com/rocketseat/">Rocketseat</a>
+Made with :purple_heart: and :coffee: learned from <a href="http://github.com/rocketseat/">Rocketseat</a><br/>
+  <a href="https://webid.net.br/audioplayer">Click here to view the full project</a>
 </p>
 
 ### Stacks
